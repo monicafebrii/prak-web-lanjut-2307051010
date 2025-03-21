@@ -12,7 +12,7 @@
     <div class="bg-white p-6 rounded-lg shadow-lg w-96 text-center">
 
         <div class="flex justify-center mb-3">
-            <img src="/img/d1b8733d-e1fa-4d74-b472-77962fe9383f.jpg" 
+            <img src="/img/kucing.png" 
             alt="Profile" 
             class="w-60 h-60 rounded-full border-4 border-gray-300 object-cover">
         </div>
