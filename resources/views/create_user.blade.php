@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form User</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+@extends('layouts.app')
+
+@section('content')
+
+<script src="https://cdn.tailwindcss.com"></script>
+
 <body class="bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center min-h-screen">
 
     <div class="bg-white shadow-xl rounded-lg p-8 w-full max-w-md border border-gray-200">
         <h2 class="text-3xl font-bold text-center text-blue-600 mb-6">Tambah User</h2>
 
-        <form action="{{ route('user.store') }}" method="POST" class="space-y-5">
+        <form action="{{ route('user.store') }}" method="post" enctype="multipart/form-data">
             @csrf
 
             <div>
@@ -47,6 +45,10 @@
                 @foreach ($errors->get('kelas_id') as $msg)
                     <p class="text-red-500 text-sm mt-1">{{ $msg }}</p>
                 @endforeach
+
+                <label for="foto">Foto:</label>
+                <input type="file" id="foto" name="foto"><br><br>
+            
             </div>
 
             <button type="submit" 
@@ -56,5 +58,5 @@
         </form>
     </div>
 
-</body>
-</html>
+
+@endsection
