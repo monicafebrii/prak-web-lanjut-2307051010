@@ -42,3 +42,5 @@ Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update')
 Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
 
 Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
+
+Route::get('/', [UserController::class, 'index'])->name('user.list');
